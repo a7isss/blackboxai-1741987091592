@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - ميديكير</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0052FF',
+                        secondary: '#E6EDFF',
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-cairo">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index-ar.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-primary text-2xl font-bold">ميديكير</span>
+                        <i class="fas fa-heart text-red-500 mr-1"></i>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#appointments" class="text-gray-700 hover:text-primary">مواعيدي</a>
+                    <a href="#records" class="text-gray-700 hover:text-primary">السجلات الطبية</a>
+                    <a href="#prescriptions" class="text-gray-700 hover:text-primary">الوصفات الطبية</a>
+                    <div class="relative">
+                        <button class="flex items-center space-x-2 text-gray-700 hover:text-primary">
+                            <img src="https://ui-avatars.com/api/?name=محمد+أحمد&background=0052FF&color=fff" 
+                                 alt="الملف الشخصي" 
+                                 class="w-8 h-8 rounded-full">
+                            <span>محمد أحمد</span>
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                    </div>
+                    <a href="dashboard.html" class="text-gray-700 hover:text-primary">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Welcome Section -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+            <h1 class="text-2xl font-bold text-gray-900">مرحباً بك، محمد! 👋</h1>
+            <p class="mt-2 text-gray-600">إليك نظرة عامة على رحلتك الصحية</p>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <button class="bg-primary text-white p-6 rounded-xl hover:bg-blue-700 transition duration-300">
+                <i class="fas fa-video text-2xl mb-4"></i>
+                <h3 class="text-lg font-semibold">حجز استشارة</h3>
+                <p class="mt-2 text-sm text-white/80">تواصل مع طبيب الآن</p>
+            </button>
+            <button class="bg-white text-primary p-6 rounded-xl border-2 border-primary hover:bg-primary hover:text-white transition duration-300">
+                <i class="fas fa-file-medical text-2xl mb-4"></i>
+                <h3 class="text-lg font-semibold">عرض السجلات</h3>
+                <p class="mt-2 text-sm text-gray-600">الوصول إلى سجلاتك الطبية</p>
+            </button>
+            <button class="bg-white text-primary p-6 rounded-xl border-2 border-primary hover:bg-primary hover:text-white transition duration-300">
+                <i class="fas fa-pills text-2xl mb-4"></i>
+                <h3 class="text-lg font-semibold">الوصفات الطبية</h3>
+                <p class="mt-2 text-sm text-gray-600">عرض وإدارة الأدوية</p>
+            </button>
+        </div>
+
+        <!-- Upcoming Appointments -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">المواعيد القادمة</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-primary/10 p-3 rounded-full">
+                            <i class="fas fa-user-md text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">د. سارة وليد</h3>
+                            <p class="text-sm text-gray-600">استشارة عامة</p>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-semibold">غداً</p>
+                        <p class="text-sm text-gray-600">10:00 صباحاً</p>
+                    </div>
+                </div>
+            </div>
+            <button class="mt-4 text-primary hover:text-blue-700 text-sm font-medium">
+                عرض جميع المواعيد ←
+            </button>
+        </div>
+
+        <!-- Health Metrics -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Recent Activity -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h2 class="text-xl font-bold text-gray-900 mb-4">النشاط الأخير</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 text-sm">
+                        <i class="fas fa-file-medical text-primary"></i>
+                        <p>تم تحميل تقرير طبي</p>
+                        <span class="text-gray-500">منذ يومين</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-sm">
+                        <i class="fas fa-pills text-primary"></i>
+                        <p>تم تجديد الوصفة الطبية</p>
+                        <span class="text-gray-500">منذ 5 أيام</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Health Tips -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h2 class="text-xl font-bold text-gray-900 mb-4">نصائح صحية</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-lightbulb text-primary mt-1"></i>
+                        <p class="text-sm">تذكر أن تأخذ فترات راحة منتظمة وتحافظ على شرب الماء طوال اليوم.</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-heart text-primary mt-1"></i>
+                        <p class="text-sm">30 دقيقة من التمارين اليومية يمكن أن تحسن صحتك بشكل كبير.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-600">
+                <p>© 2024 ميديكير. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
